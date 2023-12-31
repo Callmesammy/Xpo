@@ -1,75 +1,65 @@
 import {
   View,
-  Image,
   Text,
   SafeAreaView,
-  StatusBar,
-  ScrollView,
   TouchableOpacity,
-  FlatList,
+  TextInput,
+  ScrollView,
 } from "react-native";
-import React, { useState } from "react";
-import Icon from "react-native-vector-icons/Feather";
+import React from "react";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { Fontss, Imag } from "../Theme/Fonts";
-import Feattures from "./Feattures";
-import Scroller from "./Scroller";
+import Icon from "react-native-vector-icons/FontAwesome";
+import { Items } from "../Theme/Fonts";
+import Headerscroll from "./Headerscroll";
 
 export default function HomePage() {
-  const [flex, flexbox] = useState(null);
   return (
-    <View className="flex-1 relative bg-black">
-      <StatusBar barStyle="light-content" />
+    <View>
 
-      <SafeAreaView>
-        <View className="flex-row justify-between space-x-3  px-2">
-          <Text className="text-white text-3xl font-bold">Good Evening </Text>
-          <View className="flex-row space-x-4">
-            <TouchableOpacity>
-              <Icon name="bell" size="25" color="white" />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon name="settings" size="25" color="white"/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon name="clock" size="25" color="white" />
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View className="top-7 space-y-5">
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            className="overflow-visible top-3"
+    <SafeAreaView className="bg-purple-300 flex">
+      <View className="flex-row ml-4 items-center justify-between mx-3">
+        <Text className="font-bold text-2xl text-purple-900">
+          Explore the taste
+        </Text>
+        <View className="flex-row space-x-4 ">
+          <TouchableOpacity className="p-3  mb-3 rounded-2xl justify-center flex-row bg-purple-600">
+            <Icon name="shopping-cart" size="20" color="white" />
+            <View className="absolute -right-3 -top-3 w-6 h-6 bg-red-600 items-center justify-center rounded-full">
+              <Text className="text-white font-semibold">4</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{ width: wp(13), height: hp(5) }}
+            className="  mb-3 rounded-2xl justify-center items-center flex-row bg-gray-700 "
           >
-            {Fontss.map((cat) => {
-              let OnKey = cat == flex;
-              let pressed = OnKey ? " bg-green-500" : " bg-gray-600";
-              let texted = OnKey ? " text-black" : " text-white";
-
-              return (
-                <TouchableOpacity
-                  key={cat}
-                  onPress={() => flexbox(cat)}
-                  className={"rounded-full ml-3 bg-gray-600 p-3" + pressed}
-                >
-                  <Text
-                    style={{ fontSize: wp(4) }}
-                    className={"font-bold tracking-wider text-white" + texted}
-                  >
-                    {cat}
-                  </Text>
-                </TouchableOpacity>
-              );
-            })}
-          </ScrollView>
-          <Feattures />
+            <Icon name="user" size="20" color="white" />
+            
+          </TouchableOpacity>
         </View>
-      </SafeAreaView>
+      </View>
+      <View className="flex z-50  mb-5 mx-4  top-3">
+        <View className="flex-row shadow-lg px-3 items-center bg-white opacity-70 rounded-full mb-2">
+          <TextInput
+            style={{ width: wp(75), height: hp(5) }}
+            placeholder="Search items here"
+            placeholderTextColor="gray"
+            className="mx-2"
+          />
+          <TouchableOpacity className="p-3 bg-gray-400 rounded-full">
+            <Icon name="search" size="20" color="white" />
+          </TouchableOpacity>
+        </View>
+      </View>  
+        </SafeAreaView>
+
+      <View>
+      <Headerscroll/>
+      </View>
+      
     </View>
+
   );
 }

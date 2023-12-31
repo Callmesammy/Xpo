@@ -8,43 +8,39 @@ export const Fontss =[
 export const Items = [
         {
           id: 1,
-          name: "Flavour",
-          image: require("../assets/Film/1.jpg"),
+          name: "Ice-cream",
+          image: require("../assets/categories/01.png"),
         },
         {
           id: 2,
-          name: "Top 100 Nigeria",
-          image: require("../assets/Film/2.jpg"),
+          name: "Burger",
+          image: require("../assets/categories/02.png"),
         },
         {
           id: 3,
-          name: "Asake",
-          image: require("../assets/Film/3.jpg"),
+          name: "Pizza",
+          image: require("../assets/categories/03.png"),
         },
         {
           id: 4,
-          name: "Top Music",
-          image: require("../assets/Film/4.jpg"),
+          name: "Noodles",
+          image: require("../assets/categories/04.png"),
         },
         {
           id: 5,
-          name: "Sounds",
-          image: require("../assets/Film/5.jpg"),
+          name: "Snacks",
+          image: require("../assets/categories/05.png"),
         },
         {
           id: 6,
-          name: "Street Music",
-          image: require("../assets/Film/6.jpg"),
+          name: "Drinks",
+          image: require("../assets/categories/06.png"),
         },
         {
           id: 4,
-          name: "Just Sounds",
-          image: require("../assets/Film/4.jpg"),
+          name: "Fish",
+          image: require("../assets/categories/07.png"),
         },
-        {
-          id: 5,
-          name: "Top 10",
-          image: require("../assets/Film/5.jpg"),
-        },
+      
       
       ];
