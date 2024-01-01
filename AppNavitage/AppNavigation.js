@@ -14,7 +14,7 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
     <Stack.Navigator initialRouteName='Bord'>
-      <Stack.Screen options={{headerShown: false}} name="HME" component={HomePage} />
+      <Stack.Screen options={{headerShown: false, presentation: 'fullScreenModal'}} name="HME" component={HomePage} />
       <Stack.Screen options={{headerShown: false}} name="Bord" component={Onboarding} />
       <Stack.Screen options={{headerShown: false}} name="Pass" component={Password} />
       <Stack.Screen options={{headerShown: false}} name="Log" component={Login} />

@@ -21,8 +21,8 @@ export default function Headerscroll() {
           return(
             <View key={index} className="px-2 top-3 ">
             <TouchableOpacity onPress={()=>Setvar(item)} className={"bg-red-300 items-center space-y-1 rounded-3xl p-2"+Btn}>
-                <Image style={{width: wp(17), height: hp(6)}} source={item.image} className="p-3"/>
-                <Text className={"text-md font-semibold text-gray-900 text-center"+Eext}>{item.name}</Text>
+                <Image style={{width: wp(12), height: hp(4)}} source={item.image} className="p-2"/>
+                <Text className={"text-md text-gray-900 text-center"+Eext}>{item.name}</Text>
 
             </TouchableOpacity>
             </View>
@@ -31,6 +31,7 @@ export default function Headerscroll() {
       }
 
       </ScrollView>
+      
     </View>
   )
 }

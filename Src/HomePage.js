@@ -14,6 +14,7 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Items } from "../Theme/Fonts";
 import Headerscroll from "./Headerscroll";
+import Itemfolder from "./Itemfolder";
 
 export default function HomePage() {
   return (
@@ -22,7 +23,7 @@ export default function HomePage() {
     <SafeAreaView className="bg-purple-300 flex">
       <View className="flex-row ml-4 items-center justify-between mx-3">
         <Text className="font-bold text-2xl text-purple-900">
-          Explore the taste
+          Enjoy the taste
         </Text>
         <View className="flex-row space-x-4 ">
           <TouchableOpacity className="p-3  mb-3 rounded-2xl justify-center flex-row bg-purple-600">
@@ -55,10 +56,14 @@ export default function HomePage() {
       </View>  
         </SafeAreaView>
 
-      <View>
-      <Headerscroll/>
-      </View>
+      <View className="overflow-shown">                 
+
+      <Headerscroll />
       
+      </View>
+      <View className="top-3 mx-3">
+        <Itemfolder/>
+      </View>
     </View>
 
   );
